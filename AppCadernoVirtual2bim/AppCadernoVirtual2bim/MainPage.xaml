@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCadernoVirtual2bim.MainPage"
+             Title="App Caderno Virtual"
+             BackgroundColor="#FFEDF8">
+
+    <StackLayout>
+
+        <Label Text="App Caderno" 
+               TextColor="Black" 
+               FontSize="Header" 
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+        />
+
+        <!--ScrollView nos permite fazer rolagem com barra dentro de uma página, deixando-a mais dinâmica-->
+        <ScrollView>
+
+            <!--Criação de uma Grid para inserir os botões e elementos utilizados nesta página de conteúdo-->
+            <Grid RowSpacing="20" ColumnSpacing="10" Padding="15">
+
+                <!--Definição de colunas e linhas, respectivamente-->
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="140"/>
+                    <RowDefinition Height="140"/>
+                    <RowDefinition Height="140"/>
+                    <RowDefinition Height="140"/>
+                    <RowDefinition Height="140"/>
+                    <RowDefinition Height="140"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="140"/>
+                    <RowDefinition Height="140"/>
+                    <RowDefinition Height="140"/>
+                    <RowDefinition Height="140"/>
+                    <RowDefinition Height="140"/>
+                    <RowDefinition Height="140"/>
+                    <RowDefinition Height="140"/>
+                </Grid.RowDefinitions>
+
+                <Label Text="Ensino Médio" 
+                       Grid.Row="0" Grid.ColumnSpan="1"
+                       TextColor="Black" 
+                       FontSize="Title"/>
+
+                <!--Criação de um botão com imagem (ImageButton)
+                    Sua definição de linha e coluna dentro da Grid
+                    Inserido um nome para este botão
+                    Escolhendo o estilo a ser utilizado, pré-definido em App.xaml
+                    Definição de altura, largura e "arredondamento" do botão
+                    *Este padrão é adotado em todos os ImageButtons-->
+                
+                <ImageButton Grid.Row="1" Grid.Column="0"
+                            x:Name="BtnMatematica"                      
+                            Style="{StaticResource BotaoImagem}"
+                            Clicked="BotaoMatematica"
+                            WidthRequest="300"
+                            HeightRequest="400"
+                            CornerRadius="10"/>
+
+                <ImageButton Grid.Row="1" Grid.Column="1"
+                            x:Name="BtnPortugues"
+                            Style="{StaticResource BotaoImagem}"
+                            Clicked="BotaoPortugues"
+                            WidthRequest="300"
+                            HeightRequest="400"
+                            CornerRadius="10"/>
+
+                <ImageButton Grid.Row="2" Grid.Column="0"
+                            x:Name="BtnHistoria"
+                            Style="{StaticResource BotaoImagem}"
+                            Clicked="BotaoHistoria"
+                            WidthRequest="300"
+                            HeightRequest="400"
+                            CornerRadius="10"/>
+
+                <ImageButton Grid.Row="2" Grid.Column="1"
+                            x:Name="BtnFisica"
+                            Style="{StaticResource BotaoImagem}"
+                            Clicked="BotaoFisica"
+                            WidthRequest="300"
+                            HeightRequest="400"
+                            CornerRadius="10"/>
+
+                <ImageButton Grid.Row="3" Grid.Column="0"
+                            x:Name="BtnQuimica"
+                            Style="{StaticResource BotaoImagem}"
+                            Clicked="BotaoQuimica"
+                            WidthRequest="300"
+                            HeightRequest="400"
+                            CornerRadius="10"/>
+
+                <ImageButton Grid.Row="3" Grid.Column="1"
+                            x:Name="BtnBiologia"
+                            Style="{StaticResource BotaoImagem}"
+                            Clicked="BotaoBiologia"
+                            WidthRequest="300"
+                            HeightRequest="400"
+                            CornerRadius="10"/>
+
+                <ImageButton Grid.Row="4" Grid.Column="0"
+                            x:Name="BtnGeografia"
+                            Style="{StaticResource BotaoImagem}"
+                            Clicked="BotaoGeografia"
+                            WidthRequest="300"
+                            HeightRequest="400"
+                            CornerRadius="10"/>
+
+                <ImageButton Grid.Row="4" Grid.Column="1"
+                            x:Name="BtnSociologia"
+                            Style="{StaticResource BotaoImagem}"
+                            Clicked="BotaoSociologia"
+                            WidthRequest="300"
+                            HeightRequest="400"
+                            CornerRadius="10"/>
+                
+                <ImageButton Grid.Row="5" Grid.Column="0"
+                            x:Name="BtnFilosofia"
+                            Style="{StaticResource BotaoImagem}"
+                            Clicked="BotaoFilosofia"
+                            WidthRequest="300"
+                            HeightRequest="400"
+                            CornerRadius="10"/>
+
+                <ImageButton Grid.Row="5" Grid.Column="1"
+                            x:Name="BtnArtes"
+                            Style="{StaticResource BotaoImagem}"
+                            Clicked="BotaoArtes"
+                            WidthRequest="300"
+                            HeightRequest="400"
+                            CornerRadius="10"/>
+
+                <ImageButton Grid.Row="6" Grid.Column="0"
+                            x:Name="BtnIngles"
+                            Style="{StaticResource BotaoImagem}"
+                            Clicked="BotaoIngles"
+                            WidthRequest="300"
+                            HeightRequest="400"
+                            CornerRadius="10"/>
+                
+                <Label Text="Ensino Técnico" 
+                       Grid.Row="7" Grid.ColumnSpan="1"
+                       TextColor="Black" 
+                       FontSize="Title"/>
+
+                <ImageButton Grid.Row="8" Grid.Column="0"
+                            x:Name="BtnBancoDados"
+                            Style="{StaticResource BotaoImagem}"
+                            Clicked="BtnBancoDados_Clicked"
+                            WidthRequest="300"
+                            HeightRequest="400"
+                            CornerRadius="10"/>
+
+                <ImageButton Grid.Row="8" Grid.Column="1"
+                            x:Name="BtnAnaliseProj"
+                            Style="{StaticResource BotaoImagem}"
+                            Clicked="BtnAnaliseProj_Clicked"
+                            WidthRequest="300"
+                            HeightRequest="400"/>
+
+                <ImageButton Grid.Row="9" Grid.Column="0"
+                            x:Name="BtnDesignDigital"
+                            Style="{StaticResource BotaoImagem}"
+                            Clicked="BtnDesignDigital_Clicked"
+                            WidthRequest="300"
+                            HeightRequest="400"
+                            CornerRadius="10"/>
+
+                <ImageButton Grid.Row="9" Grid.Column="1"
+                            x:Name="BtnFundamentosInfo"
+                            Style="{StaticResource BotaoImagem}"
+                            Clicked="BtnFundamentosInfo_Clicked"
+                            WidthRequest="300"
+                            HeightRequest="400"
+                            CornerRadius="10"/>
+
+                <ImageButton Grid.Row="10" Grid.Column="0"
+                            x:Name="BtnProgramacaoAlg"
+                            Style="{StaticResource BotaoImagem}"
+                            Clicked="BtnProgramacaoAlg_Clicked"
+                            WidthRequest="300"
+                            HeightRequest="400"
+                            CornerRadius="10"/>
+
+                <ImageButton Grid.Row="10" Grid.Column="1"
+                            x:Name="ProgramacaoWeb"
+                            Style="{StaticResource BotaoImagem}"
+                            Clicked="ProgramacaoWeb_Clicked"
+                            WidthRequest="300"
+                            HeightRequest="400"
+                            CornerRadius="10"/>
+
+                <ImageButton Grid.Row="11" Grid.Column="0"
+                            x:Name="ProgramacaoMobile"
+                            Style="{StaticResource BotaoImagem}"
+                            Clicked="ProgramacaoMobile_Clicked"
+                            WidthRequest="300"
+                            HeightRequest="400"
+                            CornerRadius="10"/>
+
+                <ImageButton Grid.Row="11" Grid.Column="1"
+                            x:Name="DesenvolvimentoSist"
+                            Style="{StaticResource BotaoImagem}"
+                            Clicked="DesenvolvimentoSist_Clicked"
+                            WidthRequest="300"
+                            HeightRequest="400"
+                            CornerRadius="10"/>
+
+                <ImageButton Grid.Row="12" Grid.Column="0"
+                            x:Name="EticaCidad"
+                            Style="{StaticResource BotaoImagem}"
+                            Clicked="EticaCidad_Clicked"
+                            WidthRequest="300"
+                            HeightRequest="400"
+                            CornerRadius="10"/>
+
+                <ImageButton Grid.Row="12" Grid.Column="1"
+                            x:Name="SistemasEmbarcados"
+                            Style="{StaticResource BotaoImagem}"
+                            Clicked="SistemasEmbarcados_Clicked"
+                            WidthRequest="300"
+                            HeightRequest="400"
+                            CornerRadius="10"/>
+
+                <ImageButton Grid.Row="13" Grid.Column="0"
+                            x:Name="QualidadeSoft"
+                            Style="{StaticResource BotaoImagem}"
+                            Clicked="QualidadeSoft_Clicked"
+                            WidthRequest="300"
+                            HeightRequest="400"
+                            CornerRadius="10"/>
+
+                <ImageButton Grid.Row="13" Grid.Column="1"
+                            x:Name="InternetRedes"
+                            Style="{StaticResource BotaoImagem}"
+                            Clicked="InternetRedes_Clicked"
+                            WidthRequest="300"
+                            HeightRequest="400"
+                            CornerRadius="10"/>
+            </Grid>
+
+
+        </ScrollView>
+        
+
+    </StackLayout>
+
+</ContentPage>

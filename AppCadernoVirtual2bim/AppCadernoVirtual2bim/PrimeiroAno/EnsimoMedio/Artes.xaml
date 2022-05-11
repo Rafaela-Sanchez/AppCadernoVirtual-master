@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCadernoVirtual2bim.PrimeiroAno.EnsimoMedio.Artes"
+             Title="Artes"
+             BackgroundColor="#FFEDF8">
+
+
+    <StackLayout>
+
+        <!--Criação de uma Grid para inserir os botões e elementos utilizados nesta página de conteúdo-->
+
+        <Grid RowSpacing="20" ColumnSpacing="20" Padding="100">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+
+        </Grid>
+        
+        <!--Botão com uso de um estilo (BotaoAnos) e criação de uma ação atrelada à ele 
+        (Navegação entre telas definida no código por trás (Artes.xaml.cs) -->
+
+        <Button x:Name="Artes1"
+                Grid.Column="1"
+                Grid.Row="0"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Text="Primeiro Ano"
+                Style="{StaticResource BotaoAnos}"
+                CornerRadius="10"
+                Clicked="Artes1_Clicked">
+        </Button>
+
+    </StackLayout>
+
+</ContentPage>
